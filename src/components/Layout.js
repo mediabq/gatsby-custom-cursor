@@ -1,0 +1,31 @@
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import GlobalStyles from "../styles/GlobalStyles";
+import Typography from "../styles/Typography";
+import Theme from "../styles/theme";
+import Header from "./Header";
+import Footer from "./Footer";
+
+const LayoutStyles = styled.div`
+  width: 1460px;
+  margin: 0 auto;
+`;
+
+const Layout = ({ children }) => {
+  return (
+    <>
+      <GlobalStyles />
+      <Typography />
+
+      <ThemeProvider theme={Theme}>
+        <LayoutStyles>
+          <Header />
+          {children}
+          <Footer />
+        </LayoutStyles>
+      </ThemeProvider>
+    </>
+  );
+};
+
+export default Layout;

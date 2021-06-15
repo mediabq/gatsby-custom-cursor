@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -17,6 +17,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-styled-components": "^4.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
