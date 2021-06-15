@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <IndexPageStyles>
-        <h1>Test</h1>
+        <h1>This is where the content on the homepage goes</h1>
       </IndexPageStyles>
     </Layout>
   );
