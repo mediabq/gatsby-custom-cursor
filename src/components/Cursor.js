@@ -1,5 +1,33 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import styled from "styled-components";
+
+const CursorStyles = styled.div`
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    pointer-events: none;
+    circle {
+      stroke: var(--color-black);
+      stroke-width: 1px;
+      transition: fill 300ms;
+    }
+  }
+
+  .dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 990;
+    pointer-events: none;
+  }
+`;
 
 const Cursor = () => {
   const [clicked, setClicked] = useState(false);
@@ -25,8 +53,8 @@ const Cursor = () => {
 
   const handleLinkHoverEvents = () => {
     document.querySelectorAll("a").forEach((el) => {
-      el.addEventListener("mouseover", () => setLinkHovered(true));
-      el.addEventListener("mouseout", () => setLinkHovered(false));
+      el.addEventListener("mouseenter", () => setLinkHovered(true));
+      el.addEventListener("mouseleave", () => setLinkHovered(false));
     });
   };
 
@@ -67,10 +95,11 @@ const Cursor = () => {
 
   const onMouseUp = () => {
     setClicked(false);
+    setLinkHovered(false);
   };
 
   return (
-    <Fragment>
+    <CursorStyles>
       <motion.svg
         style={{
           translateX: cursorXSpring,
@@ -105,7 +134,7 @@ const Cursor = () => {
           opacity: hidden ? 0 : 1,
         }}
       ></motion.div>
-    </Fragment>
+    </CursorStyles>
   );
 };
 
