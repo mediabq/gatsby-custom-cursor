@@ -5,6 +5,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Poppins\:300`, `Roboto\:300,700`],
