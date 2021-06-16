@@ -7,8 +7,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const LayoutStyles = styled.div`
-  width: 1460px;
+  width: 100%;
   margin: 0 auto;
+  background-color: var(--color-white);
+  .container {
+    width: 1460px;
+    margin: 0 auto;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -19,9 +24,11 @@ const Layout = ({ children }) => {
 
       <ThemeProvider theme={Theme}>
         <LayoutStyles>
-          <Header />
-          {children}
-          <Footer />
+          <div className="container">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </LayoutStyles>
       </ThemeProvider>
     </>

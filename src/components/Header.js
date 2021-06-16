@@ -21,6 +21,7 @@ const HeaderStyles = styled.header`
           text-decoration: none;
           font-weight: 700;
           color: var(--color-black);
+          padding: 1em 0.3em;
         }
       }
     }

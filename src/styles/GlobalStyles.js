@@ -23,6 +23,10 @@ const GlobalStyles = createGlobalStyle`
     --color-accent-light: #d7548f;
   }
 
+
+  .space{
+    height:200rem;
+  }
 `;
 
 export default GlobalStyles;

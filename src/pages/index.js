@@ -9,6 +9,7 @@ const IndexPage = () => {
     <Layout>
       <IndexPageStyles>
         <h1>This is where the content on the homepage goes</h1>
+        <div className="space"></div>
       </IndexPageStyles>
     </Layout>
   );

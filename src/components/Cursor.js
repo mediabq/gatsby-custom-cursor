@@ -19,13 +19,14 @@ const CursorStyles = styled.div`
   .dot {
     width: 4px;
     height: 4px;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     border-radius: 50%;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 990;
     pointer-events: none;
+    mix-blend-mode: difference;
   }
 `;
 
@@ -108,7 +109,7 @@ const Cursor = () => {
         initial={{ opacity: 1 }}
         animate={{
           opacity: hidden ? 0 : 1,
-          scale: clicked ? 0.5 : linkHovered ? 1.5 : 1,
+          scale: clicked ? 0.5 : linkHovered ? 0.2 : 1,
         }}
         height="50"
         width="50"
@@ -132,6 +133,7 @@ const Cursor = () => {
         }}
         animate={{
           opacity: hidden ? 0 : 1,
+          scale: linkHovered ? 14 : 1,
         }}
       ></motion.div>
     </CursorStyles>
