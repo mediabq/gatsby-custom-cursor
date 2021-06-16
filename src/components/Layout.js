@@ -7,6 +7,7 @@ import Header from "./Header";
 
 const LayoutStyles = styled.div`
   width: 100%;
+  max-width: 1460px;
   margin: 0 auto;
   background-color: var(--color-white);
   .container {
@@ -26,7 +27,6 @@ const Layout = ({ children }) => {
           <div className="container">
             <Header />
             {children}
-            <Footer />
           </div>
         </LayoutStyles>
       </ThemeProvider>
