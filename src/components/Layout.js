@@ -7,11 +7,11 @@ import Header from "./Header";
 
 const LayoutStyles = styled.div`
   width: 100%;
-  max-width: 1460px;
   margin: 0 auto;
   background-color: var(--color-white);
   .container {
-    width: 1460px;
+    width: 80%;
+    max-width: 1460px;
     margin: 0 auto;
   }
 `;

@@ -10,7 +10,7 @@ const IndexPageStyles = styled.main`
   align-items: center;
   height: 86vh;
   .image-wrapper {
-    width: 50%;
+    width: 65%;
     height: 84%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -37,7 +37,7 @@ const IndexPageStyles = styled.main`
     }
   }
   .text-right {
-    width: 50%;
+    width: 35%;
     h1 {
       font-size: var(--font-hero-size);
     }
