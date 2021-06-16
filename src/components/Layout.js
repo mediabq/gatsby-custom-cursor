@@ -4,7 +4,6 @@ import GlobalStyles from "../styles/GlobalStyles";
 import Typography from "../styles/Typography";
 import Theme from "../styles/theme";
 import Header from "./Header";
-import Footer from "./Footer";
 
 const LayoutStyles = styled.div`
   width: 100%;
