@@ -61,9 +61,8 @@ const IndexPage = () => {
     }
   `);
 
-  const image1 = data.allFile.nodes[0].childrenImageSharp[0].gatsbyImageData;
-  const image2 = data.allFile.nodes[1].childrenImageSharp[0].gatsbyImageData;
-  console.log(image1);
+  const image1 = data.allFile.nodes[1].childrenImageSharp[0].gatsbyImageData;
+  const image2 = data.allFile.nodes[0].childrenImageSharp[0].gatsbyImageData;
 
   return (
     <Layout>
