@@ -6,9 +6,14 @@ import Theme from "../styles/theme";
 import Header from "./Header";
 
 const LayoutStyles = styled.div`
-  width: 90%;
-  max-width: 1460px;
+  width: 100%;
   margin: 0 auto;
+  background-color: var(--color-white);
+  .container {
+    width: 80%;
+    max-width: 1460px;
+    margin: 0 auto;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -19,8 +24,10 @@ const Layout = ({ children }) => {
 
       <ThemeProvider theme={Theme}>
         <LayoutStyles>
-          <Header />
-          {children}
+          <div className="container">
+            <Header />
+            {children}
+          </div>
         </LayoutStyles>
       </ThemeProvider>
     </>
