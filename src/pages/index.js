@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 
 const IndexPageStyles = styled.main`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 86vh;
   .image-wrapper {
-    width: 65%;
-    height: 84%;
+    width: 60%;
+    height: 40rem;
+    width: 40rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -37,7 +39,7 @@ const IndexPageStyles = styled.main`
     }
   }
   .text-right {
-    width: 35%;
+    width: 40%;
     h1 {
       font-size: var(--font-hero-size);
     }
@@ -79,7 +81,7 @@ const IndexPage = () => {
         <div className="image-wrapper">
           <div className="image1">
             <motion.div
-              initial={{ y: "-100%", scale: 1.6 }}
+              initial={{ y: "-130%", scale: 1.6 }}
               animate={{ y: 0, scale: 1 }}
               transition={{ duration: 1.4, ease: "easeInOut", delay: 0.5 }}
               className="animated-image1"
@@ -92,7 +94,7 @@ const IndexPage = () => {
           </div>
           <div className="image2">
             <motion.div
-              initial={{ x: "100%", scale: 1.6 }}
+              initial={{ x: "130%", scale: 1.6 }}
               animate={{ x: 0, scale: 1 }}
               transition={{ duration: 1.4, ease: "easeInOut", delay: 0.5 }}
               className="animated-image2"
